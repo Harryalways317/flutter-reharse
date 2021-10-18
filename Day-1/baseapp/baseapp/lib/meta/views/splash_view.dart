@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:baseapp/core/providers/cache_notifiers.dart';
+import 'package:baseapp/core/notifiers/cache_notifiers.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';

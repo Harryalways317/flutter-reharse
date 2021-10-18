@@ -1,4 +1,4 @@
-import 'package:baseapp/core/providers/cache_notifiers.dart';
+import 'package:baseapp/core/notifiers/cache_notifiers.dart';
 import 'package:baseapp/meta/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
