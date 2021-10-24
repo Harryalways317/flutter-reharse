@@ -1,12 +1,20 @@
+import 'dart:convert';
+
 import 'package:baseapp/core/api/mockapi.dart';
 import 'package:flutter/material.dart';
 
 class MockAPINotifier extends ChangeNotifier {
   final mockAPI = new MockAPI();
+  List _posts = [];
+  List get posts => _posts;
 
   Future getData() async {
     try {
-      mockAPI.getData();
+      mockAPI.getData().then((value) async {
+        final parsedData = await jsonDecode(value.toString());
+        _posts = parsedData;
+        notifyListeners();
+      });
     } catch (error) {
       print(error);
     }

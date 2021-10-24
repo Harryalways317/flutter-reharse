@@ -1,6 +1,7 @@
 import 'package:baseapp/core/notifiers/cache_notifiers.dart';
 import 'package:baseapp/core/notifiers/counter_notifier.dart';
 import 'package:baseapp/core/notifiers/mockapi_notifiers.dart';
+import 'package:baseapp/meta/views/list_view.dart';
 import 'package:baseapp/meta/views/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -118,6 +119,14 @@ class HomeView extends StatelessWidget {
                         child: Text("Put"),
                       ),
                     ],
+                  ),
+                  MaterialButton(
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ListDataView()));
+                    },
+                    child: Text("Next Screen"),
+                    color: Colors.indigo,
                   )
                 ],
               ),
